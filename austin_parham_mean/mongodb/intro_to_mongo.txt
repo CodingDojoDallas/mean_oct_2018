@@ -1,1 +1,0 @@
-db.students.updateMany({},{$currentDate:{updated_on:true}})
