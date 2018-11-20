@@ -1,10 +1,10 @@
 var mongoose = require('mongoose');
 
-var AuthorSchema = new mongoose.Schema({
-  name: {
+var ProductSchema = new mongoose.Schema({
+  title: {
     type: String,
-    minlength: [3,"Product name is NOT less than 3 letters"],
-    required: [true, "Name is required"],
+    minlength: [3,"Product Title is NOT less than 3 letters"],
+    required: [true, "Title is required"],
   },
   price: {
     type: Number,
@@ -16,5 +16,5 @@ var AuthorSchema = new mongoose.Schema({
   },
 }, {timestamps: true });
 
-var Author = mongoose.model('Author', AuthorSchema);
-module.exports = Author;
+var Product = mongoose.model('Product', ProductSchema);
+module.exports = Product;
