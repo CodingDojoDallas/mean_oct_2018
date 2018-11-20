@@ -17,7 +17,7 @@ export class AppComponent implements OnInit {
     this.gold = 0;
   }
 
-  clickHanlder(location: string){
+  clickHandler(location: string){
     switch(location) {
       case 'farm':
       var gold_earned = Math.floor((Math.random() * 4 ) + 2);
