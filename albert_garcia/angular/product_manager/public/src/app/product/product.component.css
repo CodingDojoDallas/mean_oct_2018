@@ -1,0 +1,29 @@
+#container {
+    margin-top: 50px;
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+.product {
+    border: 2px solid black;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    padding: 10px;
+}
+p {
+    font-size: 24px;
+}
+button {
+    font-size: 24px;
+    color: white;
+    padding: 10px 20px;
+    background-color: rgb(85, 183, 216);
+}
+.delete {
+    background-color: rgb(225, 94, 94);
+    margin-left: 10px;
+}
+img {
+    height: 200px;
+}
