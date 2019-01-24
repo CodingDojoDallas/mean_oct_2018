@@ -18,4 +18,8 @@ export class ProductsService {
   createProducts(product: Product) {
     return this._http.post('/api/products', product);
   }
+
+  showProducts(pid: Number) {
+    return this._http.get(`/api/products/${pid}`);
+  }
 }

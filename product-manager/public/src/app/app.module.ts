@@ -17,7 +17,8 @@ import { ProductsComponent } from './products/products.component';
 import { ProductsInfoComponent } from './products/products-info/products-info.component';
 import { ProductsEditComponent } from './products/products-edit/products-edit.component';
 import { ProductsNewComponent } from './products/products-new/products-new.component';
-import { ProductComponent } from './products/product/product.component'
+import { ProductComponent } from './products/product/product.component';
+import { ProductsAllComponent } from './products/products-all/products-all.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ProductComponent } from './products/product/product.component'
     ProductsInfoComponent,
     ProductsEditComponent,
     ProductsNewComponent,
-    ProductComponent
+    ProductComponent,
+    ProductsAllComponent
   ],
   imports: [
     FormsModule,

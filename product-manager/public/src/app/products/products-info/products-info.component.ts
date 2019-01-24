@@ -18,12 +18,13 @@ export class ProductsInfoComponent implements OnInit {
     console.log('ProductsInfoComponent.ngOnInit');
     this._route.params.subscribe((prms: Params) => {
       // just an example of how to get values from the URL parameters
-      console.log('ProductsInfoComponent.ngOnInit.params[id]:', prms['id']);
+      console.log('ProductsInfoComponent.ngOnInit.params[pid]:', prms['pid']);
 
       // here we would get the individual products
-      // this._productsService.product(prms['id']).subscribe(data => {
-      //   ...
-      // })
+      this._productsService.showProducts(prms['pid']).subscribe(data => {
+        console.log('data:', data)
+        this.productToShow = data['product'];
+      })
     });
   }
 

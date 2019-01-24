@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component'
 import { ProductsComponent } from './products/products.component'
 import { ProductsEditComponent } from './products/products-edit/products-edit.component'
 import { ProductsNewComponent } from './products/products-new/products-new.component'
 import { ProductsInfoComponent } from './products/products-info/products-info.component'
+import { ProductsAllComponent } from './products/products-all/products-all.component'
 
 const routes: Routes = [
-  { path: 'products', component: HomeComponent, children: [
+  { path: 'products', component: ProductsComponent, children: [
     // nested routes
-    { path: '', component: ProductsComponent },
-    { path: 'edit/:id', component: ProductsEditComponent },
+    { path: '', component: ProductsAllComponent },
+    { path: ':pid/edit', component: ProductsEditComponent },
     { path: 'new', component: ProductsNewComponent },
-    { path: ':id', component: ProductsInfoComponent },
+    { path: ':pid', component: ProductsInfoComponent },
   ]},
   { path: '', pathMatch: 'full', redirectTo: '/products' },
   { path: '**', redirectTo: '/products' },

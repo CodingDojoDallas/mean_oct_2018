@@ -25,10 +25,10 @@ export class ProductsNewComponent implements OnInit {
     console.log('ProductsNewComponent.createProduct');
     let createObservable = this._productsService.createProducts(this.newProduct);
     createObservable.subscribe((data_from_create: any) => {
-      console.log('data_from_create:', data_from_create);
+      console.log('ProductsNewComponent.createProduct - data_from_create:', data_from_create);
       this.resetNewProduct();
       if (data_from_create.errors) {
-        console.log('here', data_from_create.errors.errors);
+        console.log('ProductsNewComponent.createProduct data_from_create.errors', data_from_create.errors.errors);
         // There were errors. Set the class variable this.createErrors so they
         // can be seen in the html
         if (this.createErrors) { this.createErrors = []; }
